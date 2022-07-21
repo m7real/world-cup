@@ -283,6 +283,7 @@ hr {
 
 /* Responsive Style */
 
+/* Mobile Devices */
 @media only screen and (max-width: 576px) {
   .banner {
     display: block;
