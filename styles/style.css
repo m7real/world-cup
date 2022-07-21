@@ -281,7 +281,9 @@ hr {
   color: #303030;
 }
 
-/* Responsive Style */
+/* ---------------------
+    Responsive Style
+----------------------- */
 
 /* Mobile Devices */
 @media only screen and (max-width: 576px) {
@@ -311,6 +313,8 @@ hr {
     grid-gap: 16px;
   }
 }
+
+/* Tablet Devices */
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .banner {
     display: block;
