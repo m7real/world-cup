@@ -228,3 +228,42 @@ hr {
 .footer-icon a i:hover {
   background-color: rgb(99, 99, 99);
 }
+
+/* upcoming style */
+.match {
+  border: 0.5px solid #e8e8e8;
+}
+.match-schedule {
+  padding: 30px 15px;
+}
+.flag-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flag-img img {
+  width: 40%;
+}
+.flag-img p {
+  font-weight: 700;
+  font-size: 14px;
+}
+.vs {
+  font-weight: 700;
+  font-size: 14px;
+}
+.match-details {
+  padding-top: 16px;
+  text-align: center;
+}
+.match-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+}
+.match-time {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #303030;
+}
