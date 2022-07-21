@@ -286,7 +286,7 @@ hr {
 ----------------------- */
 
 /* Mobile Devices */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 688px) {
   .banner {
     display: block;
   }
@@ -315,7 +315,7 @@ hr {
 }
 
 /* Tablet Devices */
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media only screen and (min-width: 688px) and (max-width: 992px) {
   .banner {
     display: block;
   }
