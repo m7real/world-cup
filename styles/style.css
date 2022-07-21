@@ -74,3 +74,48 @@ body {
   position: absolute;
   bottom: 0px;
 }
+
+/* --------------------
+    section styles
+-------------------- */
+.section-wrapper {
+  width: 85%;
+  display: flex;
+}
+.side-nav {
+  display: flex;
+  justify-content: center;
+  margin-right: 24px;
+}
+.side-nav-btn {
+  width: 312px;
+  height: 312px;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+.side-nav-btn a {
+  text-decoration: none;
+  padding: 17px 39px;
+  background-color: white;
+  color: #161616;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+}
+.side-nav-btn a:hover {
+  background-color: #dd0000;
+  color: white;
+}
+.side-nav-btn a:last-child {
+  background-color: #dd0000;
+  color: white;
+}
+.blogs {
+  flex-grow: 1;
+}
