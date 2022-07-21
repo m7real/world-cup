@@ -4,14 +4,16 @@
 /* -------------------
     common styles
 ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
 }
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 100px;
   position: relative;
   margin-top: 50px;
@@ -21,24 +23,36 @@ body {
     banner style
 ------------------ */
 .banner {
+  margin: 0px auto;
   width: 85%;
   border-radius: 30px;
   background-color: #161616;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .banner-left {
-  width: 50%;
   color: white;
   padding: 80px;
 }
+
+.banner-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-right img {
+  width: 100%;
+}
+
 .banner-title {
   font-weight: 700;
   font-size: 70px;
   line-height: 80px;
   margin: 0;
 }
+
 .banner-text {
   font-weight: 400;
   font-size: 16px;
@@ -50,28 +64,15 @@ body {
   padding: 16px 25px;
   font-size: 20px;
   font-weight: 700;
-  position: relative;
   background-color: #dd0000;
   color: white;
   border-radius: 5px;
   transition: box-shadow 0.5s ease;
+  animation: sliding 10s ease-in-out 0.5s infinite alternate;
 }
 .button:hover {
   background-color: rgb(98, 88, 88);
   box-shadow: 0px 0px 20px 15px rgba(64, 196, 248, 0.5);
-}
-
-.banner-right {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.banner-right img {
-  width: 28%;
-  height: 90%;
-  position: absolute;
-  bottom: 0px;
 }
 
 /* --------------------
@@ -79,15 +80,18 @@ body {
 -------------------- */
 .section-wrapper {
   width: 85%;
-  display: flex;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px auto;
 }
+
 .side-nav {
   display: flex;
   justify-content: center;
   margin-right: 24px;
 }
 .side-nav-btn {
-  width: 312px;
+  max-width: 312px;
   height: 312px;
   background-color: black;
   border-radius: 10px;
@@ -95,6 +99,7 @@ body {
   flex-direction: column;
   padding: 30px;
   text-align: center;
+  margin-bottom: 20px;
 }
 .side-nav-btn a {
   text-decoration: none;
@@ -115,14 +120,16 @@ body {
   background-color: #dd0000;
   color: white;
 }
+
 .blogs-wrapper {
   flex-grow: 1;
 }
 .blogs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-gap: 20px;
 }
+
 .blog {
   border: 1px solid #e8e8e8;
   border-radius: 10px;
@@ -193,26 +200,33 @@ body {
 .footer-title {
   font-weight: 600;
   font-size: 40px;
+  text-align: center;
 }
 hr {
   width: 80%;
+
   margin: 50px 0;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .footer-nav {
-  width: 85%;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 20px;
+  grid-gap: 20px;
   justify-items: center;
-  align-items: center;
   margin-bottom: 50px;
 }
+
 .footer-menu {
   font-size: 16px;
   font-weight: 500;
 }
+
+.footer-icon {
+  display: flex;
+  justify-content: center;
+}
+
 .footer-icon a {
   text-decoration: none;
 }
@@ -265,4 +279,64 @@ hr {
   font-size: 14px;
   line-height: 18px;
   color: #303030;
+}
+
+/* Responsive Style */
+
+@media only screen and (max-width: 576px) {
+  .banner {
+    display: block;
+  }
+  .banner-left {
+    padding: 5%;
+  }
+  .banner-title {
+    font-size: 45px;
+    line-height: 48px;
+  }
+  .section-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .blogs {
+    grid-template-columns: 1fr;
+  }
+  .footer-wrapper {
+    padding: 5%;
+  }
+  .footer-nav {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 16px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .banner {
+    display: block;
+  }
+  .banner-left {
+    padding: 5%;
+  }
+  .banner-title {
+    font-size: 45px;
+    line-height: 48px;
+  }
+  .section-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .blogs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tab-btn {
+    display: block;
+  }
+  .footer-wrapper {
+    padding: 5%;
+  }
+  .footer-nav {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 16px;
+  }
 }
